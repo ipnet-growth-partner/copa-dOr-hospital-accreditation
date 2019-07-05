@@ -28,7 +28,7 @@ $hyperlink-text-color
                         padding-bottom: 3rem;
                         @include padding-x(1.6rem, 1.6rem);
 
-                        input[type="text"] {
+                        input {
                             @extend %text-center;
                             @extend %border-rounded-none;
                             @include createFont('Roboto', normal, 1.8rem, 900);
