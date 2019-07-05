@@ -1,0 +1,56 @@
+$default-margin-type-list: top, right, left, bottom;
+
+%remove-margin-bottom { margin-bottom: 0 !important; }
+
+%remove-padding { 
+    padding-top:    0 !important;
+    padding-right:  0 !important;
+    padding-left:   0 !important;
+    padding-bottom: 0 !important;
+ }
+
+%remove-padding-top { margin-top: 0 !important; }
+
+%remove-padding-horizontal {
+    padding-right: 0 !important;
+    padding-left:  0 !important;
+}
+
+@mixin padding($top-size, $right-size, $left-size, $bottom-size) {
+    padding-top:    $top-size    !important;
+    padding-right:  $right-size  !important;
+    padding-left:   $left-size   !important;
+    padding-bottom: $bottom-size !important;
+}
+
+@mixin padding-y($top-size, $bottom-size) {
+    padding-top:     $top-size    !important;
+    padding-bottom:  $bottom-size !important;
+}
+
+@mixin padding-x($right-size, $left-size) {
+    padding-right: $right-size !important;
+    padding-left:  $left-size  !important;
+}
+
+@mixin margin-y($top-size, $bottom-size) {
+    margin-top:     $top-size    !important;
+    margin-bottom:  $bottom-size !important;
+}
+
+
+@mixin margin-x($right-size, $left-size) {
+    margin-right: $right-size !important;
+    margin-left:  $left-size  !important;
+}
+
+
+@mixin removeMargin($margin-property-type...) {
+    @each $current-property-type in $margin-property-type {
+        @if not index($default-margin-type-list, $current-property-type) {
+            @error 'The margin type #{$current-property-type} does not exist!';
+        } @else {
+            margin-#{$margin-property-type}: 0 !important;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+// DEPENDENCIES
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// @MIXINS AND %PLACEHOLDERS
+@import '../abstracts/breakpoints';
+@import '../abstracts/flexbox';
+@import '../abstracts/fonts';
+@import '../abstracts/colors';
+@import '../abstracts/spaces';
+@import '../abstracts/aligns';
+@import '../abstracts/positions';
+@import '../abstracts/borders';
+@import '../abstracts/shadows';
+
+// COMPONENTS
+@import '../components/headers/navs/main';
+@import '../components/phrases/process-steps';
+@import '../components/buttons/init-process-steps';
+
+// PAGE ELEMENTS, STYLES AND COMPONENTS
+@include font-face('Roboto-Thin', 'Thin');
+@include font-face('Roboto-Light', 'Light');
+@include font-face('Roboto-Regular', 'Regular');
+@include font-face('Roboto-Medium', 'Medium');
+@include font-face('Roboto-Bold', 'Bold');
+@include font-face('Roboto-Black', 'Black');
+
+body {
+    min-height: 85vh; 
+    @extend %flexbox-container-column;
+    @extend %flexbox-align-center-middle;
+    @include createFont('Roboto', normal, 1rem, normal);
+    @include createColor('white', background-color);
+}
+
+header { @include navbar-main-component('transparent'); }
+main   { @include phrase-process-steps-component; }
+footer { @include btn-init-process-steps-component('dark-blue-1', 'white', 'dark-golden-1'); }

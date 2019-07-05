@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": { "*": ["types/*"] },
+      "outDir": "./dist/js",
+      "noImplicitAny": true,
+      "module": "esnext",
+      "target": "es5",
+      "allowJs": true,
+      "typeRoots": [ "./node_modules/@types" ]
+    }
+  }

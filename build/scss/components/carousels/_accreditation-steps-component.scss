@@ -1,0 +1,48 @@
+// IMPORTING SUBCOMPONENTS
+@import '../cards/registration-steps';
+
+// MAIN COMPONENT
+@mixin carousel-accreditation-steps-component {
+    #carousel-accreditation-steps-component[class="container-fluid"] {
+        @include media-breakpoint-xl { @include padding-y(3rem, unset); }
+    
+        div[class="col-12"] {
+            @include padding-x(0, 0);
+    
+            .carousel-item {
+                &:nth-child(1) {
+                    .container-fluid {
+                        .col-12 {
+                            &:nth-child(1) {
+                                // COMPONENT
+                                @include card-registration-step-component;
+                            }
+
+                            &:nth-child(2) {
+                                &:last-child {
+                                    @include padding-y(3rem, 3rem);
+    
+                                    button {
+                                        display: block;
+                                        @extend %border-rounded-pill;
+                                        @include createFont(unset, unset, unset, bold);
+                                        @include createColor('white', color);
+                                        @include createColor('dark-blue-1', background-color);
+                                        @include createShadow(box-shadow, 'sm');
+                                        @include margin-x(auto, auto);
+                                        @include padding-x(3rem, 3rem);
+    
+                                        &:hover {
+                                            @include createColor('dark-golden-1', background-color);
+                                            @include createShadow(box-shadow, 'regular');  
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

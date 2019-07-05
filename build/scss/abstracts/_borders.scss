@@ -1,0 +1,36 @@
+$default-border-style-list: solid;
+$default-border-radius-style-map: (
+    'none':         none,
+    'rounded-none': 0, 
+    'rounded':      0.25rem,
+    'rouded-pill':  50rem
+);
+
+%border-none         { border: none !important; }
+
+%border-rounded-none { border-radius: 0      !important; }
+%border-rounded      { border-radius: .25rem !important; }
+%border-rounded-pill { border-radius: 50rem  !important; }
+
+@mixin createBorder($border-property-radius-style-type, $border-property-style-type, $border-width, $border-color) {
+    $border-style-type-value: map-get($default-border-radius-style-map, $border-property-radius-style-type);
+    
+    @if not index($default-border-style-list, $border-property-style-type) {
+        @error 'The border type #{$shadow-property-type} does not exist!';
+    } @else if not $border-style-type-value {
+        @error 'The border radius type #{$border-property-radius-style-type} does not exist!';
+    } @else {
+        border:        $border-width $border-color $border-property-style-type !important;
+        border-radius: $border-style-type-value !important;
+    }
+}
+
+@mixin removeBorder($border-direction...) {
+    @each $current-direction in $border-direction {
+        @if $current-direction != top and $current-direction != right and $current-direction != left and $current-direction != bottom {
+            @error '#{$current-direction} does not exist as a direction of a border';
+        } @else {
+            border-#{$current-direction}: none !important;
+        }
+    }
+}

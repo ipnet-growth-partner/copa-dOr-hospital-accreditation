@@ -1,0 +1,19 @@
+@mixin btn-init-process-steps-component($btn-bg-color, $btn-text-color, $btn-focus-bg-color) {
+    div#btn-init-process-steps {
+        @extend %position-fixed-bottom;
+        @extend %remove-padding-horizontal;
+
+        a {
+            width: 100%;
+            @extend %border-rounded-none;
+            @include createColor($btn-bg-color, background-color);
+            @include createColor($btn-text-color, color);
+            @include padding-y(1rem, 1rem);
+            @include removeShadow(box-shadow);
+
+            &:hover {
+                @include createColor($btn-focus-bg-color, background-color);
+            }
+        }
+    }
+}

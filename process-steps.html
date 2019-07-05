@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>COPA DOR HOSPITAL BY THIAGO DE BONIS</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="THIAGO DE BONIS CARVALHO SAAD SAUD">
+    <meta name="description" content="Creation of POC for the company IPNet, in relation to the accreditation of new physicians in the network of hospitals Cup Dor.">
+    <meta name="keywords" content="Thiago Saad, Thiago De Bonis, IPNet, Copa Dor, Copa dor Hospital, POC, Sass, Typescript, Javascript, Ecmascript, Webpack">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- FAVICON -->
+    <meta name="application-name" content="COPA DOR HOSPITA BY THIAGO DE BONIS"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./dist/img/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./dist/img/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./dist/img/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./dist/img/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./dist/img/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./dist/img/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./dist/img/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./dist/img/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="./dist/img/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="./dist/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="./dist/img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./dist/img/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="./dist/img/favicon/favicon-128.png" sizes="128x128" />
+    <!-- END FAVICON -->
+    <link href="./dist/css/process-steps.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER ACCREDITATION STEPS TIMELINE COMPONENT -->
+    <header>
+        <div id="header-accreditation-steps-timeline-component" class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <div id="accreditation-step-registration-container" class="d-flex flex-column">
+                                <div><button type="button" class="btn btn-lg" data-status="waiting">1</button>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span>Ficha de Cadastro</span> <br>
+                                        <span>
+                                            Informar dados pessoais, comerciais <br>
+                                            e a categoria em que deseja se credenciar.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="accreditation-step-sending-documents-container" class="d-flex flex-column">
+                                <div><button type="button" class="btn btn-lg" data-status="null" disabled>2</button></div>
+                                <div>
+                                    <p>
+                                        <span>Envio de Documentos</span> <br>
+                                        <span>
+                                            Upload dos documentos necessários <br>
+                                            para o processo de credenciamento.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="accreditation-step-analysis-approval-container" class="d-flex flex-column">
+                                <div><button type="button" class="btn btn-lg" data-status="null" disabled>3</button></div>
+                                <div>
+                                    <p>
+                                        <span>Análise e Aprovação</span> <br>
+                                        <span>
+                                            Análisa das informações prestadas e <br>
+                                            documentações enviadas.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="accreditation-step-signature-accreditation-container" class="d-flex flex-column">
+                                <div><button type="button" class="btn btn-lg" data-status="null" disabled>4</button></div>
+                                <div>
+                                    <p>
+                                        <span>Assinatura e Credenciamento</span> <br>
+                                        <span>
+                                            Assinatura digital da carta de atuação e <br>
+                                            credenciamento do médico ao <br>
+                                            Corpo Clínico do Hospital Copa D'Or.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="accreditation-step-access-password-container" class="d-flex flex-column">
+                                <div><button type="button"class="btn btn-lg" data-status="null" disabled>5</button></div>
+                                <div>
+                                    <p>
+                                        <span>Senha de Acesso</span> <br>
+                                        <span>
+                                            Envio da senha de acesso via e-mail <br>
+                                            para uso das facilidades oferecidas pelo <br>
+                                            Hospital nas atividades diárias da prática médica.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END COMPONENT -->
+
+    <!-- CAROUSEL ACCREDITATION STEPS COMPONENT -->
+    <main>
+        <div id="carousel-accreditation-steps-component" class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div id="carousel-accreditation-steps" class="carousel slide" data-ride="carousel" data-interval="false" data-pause="hover">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <!-- CARD REGISTRATION STEP COMPONENT -->
+                                            <div id="card-registration-step-component" class="card">
+                                                <div class="card-header">
+                                                    <div class="d-flex flex-column">
+                                                        <div>
+                                                            <h5 class="card-title">Ficha de Cadastro</h5>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="card-title">Etapa 1 de 5</h6>
+                                                        </div>
+                                                        <div>
+                                                            <h7 class="card-title">Estas informações nos dirá mais sobre você.</h7>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="container-fluid">
+                                                        <form id="form-registration-step" name="form-registration-step" class="needs-validation" autocomplete novalidate>
+                                                            <div id="card-registration-step-form-personal-information" class="form-row">
+                                                                <div class="form-group col-12">
+                                                                    <p>
+                                                                        <h6>
+                                                                            Informações Pessoais 
+                                                                            <small>(Obrigatório)</small>
+                                                                        </h6>
+                                                                        <hr>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="form-group col-12">
+                                                                    <input type="text" id="RSPIFN" name="registration-step-personal-information-fullname" class="form-control" aria-describedby="FULL NAME" placeholder="Nome Completo" autofocus required>
+                                                                    <div class="valid-feedback">Tudo certo!</div>
+                                                                    <div class="invalid-feedback">Tudo certo!</div>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <input type="tel" data-mask="00/00/0000" id="RSPIDB" ame="registration-step-personal-information-date-of-birth" class="form-control" aria-describedby="DATE OF BIRTH" placeholder="Data de Nascimento" required>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <input type="tel" data-mask="000.000.000-00" id="RSPICF" name="registration-step-personal-information-cpf" class="form-control" aria-describedby="CPF" placeholder="CPF" required>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <input type="tel" data-mask="(00) 0000-0000" id="RSPIHM" name="registration-step-personal-information-phone-home" class="form-control" aria-describedby="HOME PHONE" placeholder="Telefone Residencial" required>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <input type="tel" data-mask="(00) 00000-0000" id="RSPIPC" name="registration-step-personal-information-phone-cell" class="form-control" aria-describedby="CELL PHONE" placeholder="Telefone Celular" required>
+                                                                </div>
+                                                                <div class="form-group col-12">
+                                                                    <input type="tel" data-mask="00000-000" id="RSPICP" name="registration-step-personal-information-cep" class="form-control" aria-describedby="CEP" placeholder="CEP" required>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <input type="tel" id="RSPINB" name="registration-step-personal-information-number" class="form-control" aria-describedby="NUMBER" placeholder="Número" required>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <input type="text" id="RSPICM" name="registration-step-personal-information-complement" class="form-control" aria-describedby="COMPLEMENT" placeholder="Complemento" required>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <input type="text" id="RSPIDT" name="registration-step-personal-information-district" class="form-control" aria-describedby="DISTRICT" placeholder="Bairro" required>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <input type="text" id="RSPIUF" name="registration-step-personal-information-uf" class="form-control" aria-describedby="UF" placeholder="UF" required>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <label data-for="step-one-form-sex-male">
+                                                                        <input type="radio" id="RSPISM" name="RSTPIS" value="Male" aria-describedby="DOCTOR OF MALE SEX" class="sr-only" required>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <img src="./dist/img/doctor_male.png" alt="DOCTOR OF MALE SEX">
+                                                                            </div>
+                                                                            <div class="card-footer">
+                                                                                <h7 class="card-title">SOU HOMEM</h7>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <label data-for="step-one-form-sex-female">
+                                                                        <input type="radio" id="RSPISF" name="RSTPIS" value="Female" class="sr-only" aria-describedby="DOCTOR OF FEMALE SEX" required>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <img src="./dist/img/doctor_female.png" alt="DOCTOR OF FEMALE SEX">
+                                                                            </div>
+                                                                            <div class="card-footer">
+                                                                                <h7 class="card-title">SOU MULHER</h7>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div id="card-registration-step-form-curricular-information" class="form-row">
+                                                                <div class="form-group col-12">
+                                                                    <p>
+                                                                        <h6>
+                                                                            Informações Curriculares
+                                                                            <small>(Obrigatório)</small>
+                                                                        </h6>
+                                                                        <hr>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <input type="tel" maxlength="4" name="registration-step-curricular-information-graduation-year" class="form-control" aria-describedby="GRADUATION YEAR" placeholder="Ano de Formatura" required>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <input type="tel" maxlength="9" data-mask="00000000-0/BR" data-mask-reverse="true" id="step-one-form-crm" class="form-control" aria-describedby="CRM" placeholder="CRM">
+                                                                </div>
+                                                                <div class="form-group col-12">
+                                                                    <select name="registration-step-curricular-information-occupation-area" class="form-control selectpicker" aria-describedby="OCCUPATION AREA"
+                                                                        data-style="bg-transparent text-dark border"
+                                                                        data-width="100%" data-size="5" data-live-search="true" data-mobile="false"
+                                                                        data-selected-text-format="count"
+                                                                        data-none-selected-text="Selecione suas áreas de atuação"
+                                                                        data-count-selected-text="{0} áreas selecionadas"
+                                                                        data-none-results-text="Nenhum resultado correspondente {0}" multiple required>
+                                                                        <optgroup label="ESPECIALIDADES MÉDICAS" data-icon="fas fa-award">
+                                                                            <option value="Anatomia Patológica">Anatomia Patológica</option>
+                                                                            <option value="Cardiologia">Cardiologia</option>
+                                                                            <option value="Clinica Médica">Clinica Médica</option>
+                                                                            <option value="Dermatologia">Dermatologia</option>
+                                                                            <option value="Endocrinologia">Endocrinologia</option>
+                                                                            <option value="Ergometria">Ergometria</option>
+                                                                            <option value="Gastroenterologia">Gastroenterologia</option>
+                                                                            <option value="Ginecologia">Ginecologia</option>
+                                                                            <option value="Hematologia">Hematologia</option>
+                                                                            <option value="Medicina do trabalho">Medicina do trabalho</option>
+                                                                            <option value="Nefrologia">Nefrologia</option>
+                                                                            <option value="Neurocirurgia">Neurocirurgia</option>
+                                                                            <option value="Neurologia vascular">Neurologia vascular</option>
+                                                                            <option value="Neurologia">Neurologia</option>
+                                                                            <option value="Oftalmologia">Oftalmologia</option>
+                                                                            <option value="Oncologia">Oncologia</option>
+                                                                            <option value="Ortopedia">Ortopedia</option>
+                                                                            <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+                                                                            <option value="Pediatria">Pediatria</option>
+                                                                            <option value="Pneumologia">Pneumologia</option>
+                                                                            <option value="Proctologia">Proctologia</option>
+                                                                            <option value="Psiquiatria">Psiquiatria</option>
+                                                                            <option value="Radiologia Intervencionista">Radiologia Intervencionista</option>
+                                                                            <option value="Radiologia">Radiologia</option>
+                                                                            <option value="Reumatologia">Reumatologia</option>
+                                                                            <option value="Urologia">Urologia</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="ESPECIALIDADES CIRÚRGICAS" data-icon="fas fa-syringe">
+                                                                            <option value="Cirurgia Buco-maxilo-facial">Cirurgia Buco-maxilo-facial</option>
+                                                                            <option value="Cirurgia Cardiovascular">Cirurgia Cardiovascular</option>
+                                                                            <option value="Cirurgia de cabeça e pescoço">Cirurgia de cabeça epescoço</option>
+                                                                            <option value="Cirurgia geral da Emergência">Cirurgia geral daEmergência</option>
+                                                                            <option value="Cirurgia geral">Cirurgia geral</option>
+                                                                            <option value="Cirurgia pediatrica">Cirurgia pediatrica</option>
+                                                                            <option value="Cirurgia Plástica (estética e reparadora)">Cirurgia Plástica (estética e reparadora)</option>
+                                                                            <option value="Cirurgia Torácica">Cirurgia Torácica</option>
+                                                                            <option value="Cirurgia vascular">Cirurgia vascular</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="CTIS" data-icon="fas fa-hospital">
+                                                                            <option value="CTI cardiológico">CTI cardiológico</option>
+                                                                            <option value="CTI geral">CTI geral</option>
+                                                                            <option value="CTI neurológico"> CTI neurológico</option>
+                                                                            <option value="CTI pediátrico">CTI pediátrico</option>
+                                                                            <option value="CTI pós-operatório">CTI pós-operatório</option>
+                                                                            <option value="CTI ventilatório">CTI ventilatório</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="PROCEDIMENTOS" data-icon="fas fa-stethoscope">
+                                                                            <option value="Anestesia">Anestesia</option>
+                                                                            <option value="Cardiologia Intervencionista">Cardiologia Intervencionista</option>
+                                                                            <option value="Ecocardiografia">Ecocardiografia</option>
+                                                                            <option value="Endoscopia digestiva">Endoscopia digestiva</option>
+                                                                            <option value="Endoscopia respiratória">Endoscopia respiratória</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="COMISSÕES E GRUPOS" data-icon="fas fa-star-of-life">
+                                                                            <option value="CCIH">CCIH</option>
+                                                                            <option value="EMTN">EMTN</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="OUTROS">
+                                                                            <option value="Arritmia">Arritmia</option>
+                                                                            <option value="Banco de sangue">Banco de sangue</option>
+                                                                            <option value="Emergência clínica">Emergência clínica</option>
+                                                                            <option value="Unidade Semi-intensiva">Unidade Semi-intensiva</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-6 col-lg-3">
+                                                                    <label>
+                                                                        <input type="checkbox" name="registration-step-curricular-information-degree-postgraduate" value="Postgraduate" aria-describedby="DEGREE POSTGRADUATE" class="sr-only" required>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <img src="./dist/img/degree-postgraduate.png" alt="DEGREE POSTGRADUATE">
+                                                                            </div>
+                                                                            <div class="card-footer">
+                                                                                <div class="d-flex flex-column flex-xl-row justify-content-center">
+                                                                                    <div><h7 class="card-title">POSSUO</h7></div>
+                                                                                    <div><h7 class="card-title">PÓS-GRADUAÇÃO</h7></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group col-6 col-lg-3">
+                                                                    <label>
+                                                                        <input type="checkbox" name="registration-step-curricular-information-degree-master" value="Master" aria-describedby="DEGREE MASTER" class="sr-only" required>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <img src="./dist/img/degree-master.png" alt="DEGREE MASTER">
+                                                                            </div>
+                                                                            <div class="card-footer">
+                                                                                <div class="d-flex flex-column flex-xl-row justify-content-center">
+                                                                                    <div><h7 class="card-title">POSSUO</h7></div>
+                                                                                    <div><h7 class="card-title">MESTRADO</h7></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group col-6 col-lg-3">
+                                                                    <label>
+                                                                        <input type="checkbox" name="registration-step-curricular-information-degree-doctorate" value="Doctorate" aria-describedby="DEGREE DOCTORATE" class="sr-only" required>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <img src="./dist/img/degree-doctorate.png" alt="DEGREE DOCTORATE">
+                                                                            </div>
+                                                                            <div class="card-footer">
+                                                                                <div class="d-flex flex-column flex-xl-row justify-content-center">
+                                                                                    <div><h7 class="card-title">POSSUO</h7></div>
+                                                                                    <div><h7 class="card-title">DOUTORADO</h7></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group col-6 col-lg-3">
+                                                                    <label>
+                                                                        <input type="checkbox" name="registration-step-curricular-information-degree-especialization" value="Especialization" aria-describedby="DEGREE ESPECIALIZATION" class="sr-only" required>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <img src="./dist/img/degree-especialization.png" alt="DEGREE ESPECIALIZATION">
+                                                                            </div>
+                                                                            <div class="card-footer">
+                                                                                <div class="d-flex flex-column flex-xl-row justify-content-center">
+                                                                                    <div><h7 class="card-title">POSSUO</h7></div>
+                                                                                    <div><h7 class="card-title">ESPECIALIZAÇÕES</h7></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div id="card-registration-step-form-commercial-information" class="form-row">
+                                                                <div class="form-group col-12">
+                                                                    <p>
+                                                                        <h6>
+                                                                            Informações Comerciais
+                                                                            <small>(Opcional)</small>
+                                                                        </h6>
+                                                                        <hr>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <label>
+                                                                        <input type="radio" id="RSCICM" name="registration-step-commercial-information-choose" value="true" aria-describedby="CHOOSE TRUE" class="sr-only" required>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <h7 class="card-title">DESEJO INSERIR</h7>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group col-6">
+                                                                    <label>
+                                                                        <input type="radio" id="RSCICF" name="registration-step-commercial-information-choose" value="false" aria-describedby="CHOOSE FALSE" class="sr-only" required>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <h7 class="card-title">NÃO DESEJO INSERIR</h7>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group col-6" data-status="desactived">
+                                                                    <input type="tel" data-mask="00.000.000/0000-00" name="registration-step-commercial-information-cnpj" class="form-control" aria-describedby="CNPJ" placeholder="CNPJ" disabled required>
+                                                                </div>
+                                                                <div class="form-group col-6" data-status="desactived">
+                                                                    <input type="tel" data-mask="(00) 0000-0000" id="step-one-form-commercial-information-phone-business" class="form-control" aria-describedby="BUSINESS PHONE" placeholder="Telefone Empresarial" disabled required>
+                                                                </div>
+                                                                <div class="form-group col-12" data-status="desactived">
+                                                                    <input type="tel" data-mask="00000-000" name="registration-step-commercial-information-cep" class="form-control" aria-describedby="CEP" placeholder="CEP" disabled required>
+                                                                </div>
+                                                                <div class="form-group col-6" data-status="desactived">
+                                                                    <input type="tel" name="registration-step-commercial-information-number" class="form-control" aria-describedby="NUMBER" placeholder="Número" disabled required>
+                                                                </div>
+                                                                <div class="form-group col-6" data-status="desactived">
+                                                                    <input type="text" id="step-one-form-commercial-information-cep-complement" class="form-control" aria-describedby="COMPLEMENT" placeholder="Complemento" disabled required>
+                                                                </div>
+                                                                <div class="form-group col-6" data-status="desactived">
+                                                                    <input type="text" name="registration-step-commercial-information-district" class="form-control" aria-describedby="DISTRICT" placeholder="Bairro" disabled required>
+                                                                </div>
+                                                                <div class="form-group col-6" data-status="desactived">
+                                                                    <input type="text" name="registration-step-commercial-information-uf" class="form-control" aria-describedby="UF" placeholder="UF" disabled required>
+                                                                </div>
+                                                            </div>
+                                                            <div id="card-registration-step-form-application-category" class="form-row">
+                                                                <div class="form-group col-12">
+                                                                    <p>
+                                                                        <h6>
+                                                                            Categoria para Aplicação
+                                                                            <small>(Obrigatório)</small>
+                                                                        </h6>
+                                                                        <hr>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="form-group col-12">
+                                                                    <label>
+                                                                        <button type="button" class="btn"  data-toggle="modal" data-target="#modal-application-category-information-component">
+                                                                            <i class="fas fa-info-circle fa-lg"></i>
+                                                                            <span>Saiba mais sobre os tipos de contratação</span>
+                                                                        </button>
+                                                                    </label>
+                                                                    <select id="RSPIST" name="registration-step-application-category-type" class="custom-select" required disabled>
+                                                                        <option value="null" selected disabled>Selecione o tipo de aplicação</option>
+                                                                        <option value="Membro Contratado">Membro Contratado</option>
+                                                                        <option value="Membro de Equipe Assistente">Membro de Equipe Assistente</option>
+                                                                        <option value="Membro Regular">Membro Regular</option>
+                                                                        <option value="Membro Temporário">Membro Temporário</option>
+                                                                        <option value="Membro Referência">Membro Referência</option>
+                                                                        <option value="Membro Eventual">Membro Eventual</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-6 col-sm-4" data-for="Contracted Member"  data-status="desactived">
+                                                                    <label>
+                                                                        <input type="radio" name="registration-step-commercial-information-contracted-member-type-of-hiring" value="Routine" aria-describedby="TYPE OF HIRING ROUTINE" class="sr-only" disabled required>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <img id="RSCICMTHR" src="./dist/img/doctor_male_routine.png" alt="TYPE OF HIRING ROUTINE">
+                                                                            </div>
+                                                                            <div class="card-footer">
+                                                                                <div class="d-flex flex-column flex-xl-row justify-content-center">
+                                                                                    <div><h7 class="card-title">QUERO SER</h7></div>
+                                                                                    <div><h7 class="card-title">ROTINEIRO</h7></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group col-6 col-sm-4" data-for="Contracted Member"  data-status="desactived">
+                                                                    <label>
+                                                                        <input type="radio" name="registration-step-commercial-information-contracted-member-type-of-hiring" value="Plantonist" class="sr-only" disabled require>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <img id="RSCICMTHP" src="./dist/img/doctor_male_plantonist.png" alt="TYPE OF HIRING SUBSTITUTE">
+                                                                            </div>
+                                                                            <div class="card-footer">
+                                                                                <div class="d-flex flex-column flex-xl-row justify-content-center">
+                                                                                    <div><h7 class="card-title">QUERO SER</h7></div>
+                                                                                    <div><h7 class="card-title">PLANTONISTA</h7></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group col-12 col-sm-4" data-for="Contracted Member" data-status="desactived">
+                                                                    <label>
+                                                                        <input type="radio" name="registration-step-commercial-information-contracted-member-type-of-hiring" value="Substitute" aria-describedby="TYPE OF HIRING SUBSTITUTE" class="sr-only" disabled require>
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <img id="RSCICMTHS" src="./dist/img/doctor_male_substitute.png" alt="TYPE OF HIRING SUBSTITUTE">
+                                                                            </div>
+                                                                            <div class="card-footer">
+                                                                                <div class="d-flex flex-column flex-xl-row justify-content-center">
+                                                                                    <div><h7 class="card-title">QUERO SER</h7></div>
+                                                                                    <div><h7 class="card-title">SUBSTITUTO</h7></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-group col-12" data-for="Contracted Member" data-status="desactived">
+                                                                    <select id="RSCICMHS" name="registration-step-commercial-information-contracted-member-hiring-sector" data-type="bootstrap-select" aria-describedby="HIRING SECTOR" class="form-control selectpicker" 
+                                                                            data-style="bg-transparent text-dark border"
+                                                                            data-size="10" 
+                                                                            data-width= "100%"
+                                                                            data-live-search="true" 
+                                                                            data-selected-text-format="count"
+                                                                            data-none-selected-text="Selecione o setor de contratação"
+                                                                            data-count-selected-text="{0} setores selecionados"
+                                                                            data-none-results-text="Nenhum resultado correspondente {0}"
+                                                                            multiple disabled required>
+                                                                        <optgroup label="ESPECIALIDADES MÉDICAS" data-icon="fas fa-award">
+                                                                            <option value="Anatomia Patológica">Anatomia Patológica</option>
+                                                                            <option value="Cardiologia">Cardiologia</option>
+                                                                            <option value="Clinica Médica">Clinica Médica</option>
+                                                                            <option value="Dermatologia">Dermatologia</option>
+                                                                            <option value="Endocrinologia">Endocrinologia</option>
+                                                                            <option value="Ergometria">Ergometria</option>
+                                                                            <option value="Gastroenterologia">Gastroenterologia</option>
+                                                                            <option value="Ginecologia">Ginecologia</option>
+                                                                            <option value="Hematologia">Hematologia</option>
+                                                                            <option value="Medicina do trabalho">Medicina do trabalho</option>
+                                                                            <option value="Nefrologia">Nefrologia</option>
+                                                                            <option value="Neurocirurgia">Neurocirurgia</option>
+                                                                            <option value="Neurologia vascular">Neurologia vascular</option>
+                                                                            <option value="Neurologia">Neurologia</option>
+                                                                            <option value="Oftalmologia">Oftalmologia</option>
+                                                                            <option value="Oncologia">Oncologia</option>
+                                                                            <option value="Ortopedia">Ortopedia</option>
+                                                                            <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+                                                                            <option value="Pediatria">Pediatria</option>
+                                                                            <option value="Pneumologia">Pneumologia</option>
+                                                                            <option value="Proctologia">Proctologia</option>
+                                                                            <option value="Psiquiatria">Psiquiatria</option>
+                                                                            <option value="Radiologia Intervencionista">Radiologia Intervencionista</option>
+                                                                            <option value="Radiologia">Radiologia</option>
+                                                                            <option value="Reumatologia">Reumatologia</option>
+                                                                            <option value="Urologia">Urologia</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="ESPECIALIDADES CIRÚRGICAS" data-icon="fas fa-syringe">
+                                                                            <option value="Cirurgia Buco-maxilo-facial">
+                                                                                Cirurgia Buco-maxilo-facial</option>
+                                                                            <option value="Cirurgia Cardiovascular">Cirurgia Cardiovascular</option>
+                                                                            <option value="Cirurgia de cabeça e pescoço">Cirurgia de cabeça e pescoço</option>
+                                                                            <option value="Cirurgia geral da Emergência">Cirurgia geral da Emergência</option>
+                                                                            <option value="Cirurgia geral">Cirurgia geral</option>
+                                                                            <option value="Cirurgia pediatrica">Cirurgia pediatrica</option>
+                                                                            <option value="Cirurgia Plástica (estética e reparadora)">Cirurgia Plástica (estética e reparadora)</option>
+                                                                            <option value="Cirurgia Torácica">Cirurgia Torácica</option>
+                                                                            <option value="Cirurgia vascular">Cirurgia vascular</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="CTIS" data-icon="fas fa-hospital">
+                                                                            <option value="CTI cardiológico">CTI cardiológico</option>
+                                                                            <option value="CTI geral">CTI geral</option>
+                                                                            <option value="CTI neurológico">CTI neurológico</option>
+                                                                            <option value="CTI pediátrico">CTI pediátrico</option>
+                                                                            <option value="CTI pós-operatório">CTI pós-operatório</option>
+                                                                            <option value="CTI ventilatório">CTI ventilatório</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="PROCEDIMENTOS" data-icon="fas fa-stethoscope">
+                                                                            <option value="Anestesia">Anestesia</option>
+                                                                            <option value="Cardiologia Intervencionista">Cardiologia Intervencionista</option>
+                                                                            <option value="Ecocardiografia">Ecocardiografia</option>
+                                                                            <option value="Endoscopia digestiva">Endoscopia digestiva</option>
+                                                                            <option value="Endoscopia respiratória">Endoscopia respiratória</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="COMISSÕES E GRUPOS" data-icon="fas fa-star-of-life">
+                                                                            <option value="CCIH">CCIH</option>
+                                                                            <option value="EMTN">EMTN</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="OUTROS">
+                                                                            <option value="Arritmia">Arritmia</option>
+                                                                            <option value="Banco de sangue">Banco de sangue</option>
+                                                                            <option value="Emergência clínica">Emergência clínica</option>
+                                                                            <option value="Unidade Semi-intensiva">Unidade Semi-intensiva
+                                                                            </option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-12" data-for="Assistant Member"  data-status="desactived">
+                                                                    <select id="RGSCIAMCT" name="registration-step-commercial-information-assistant-member-choose-team" aria-describedby="CHOOSE TEAM" class="custom-select" disabled required>
+                                                                        <option selected disabled>Selecionea equipe desejada</option>
+                                                                        <option value="Team X">Equipe X</option>
+                                                                        <option value="Team Y">Equipe Y</option>
+                                                                        <option value="Team |">Equipe Z</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-12" data-for="Regular Member"    data-status="desactived">
+                                                                    <select id="RSCIRMAE" name="registration-step-commercial-information-regular-member-area-of-expertise" aria-describedby="AREA OF EXPERTISE" data-type="bootstrap-select" class="selectpicker form-control"
+                                                                            data-style="bg-transparent text-dark border"
+                                                                            data-size="10" data-live-search="true" 
+                                                                            ata-selected-text-format="count"
+                                                                            data-none-selected-text="Selecione sua área de especialidade"
+                                                                            data-count-selected-text="{0} áreas selecionadas"
+                                                                            data-none-results-text="Nenhum resultado correspondente {0}"
+                                                                            multiple disabled required>
+                                                                        <optgroup label="ESPECIALIDADES MÉDICAS" data-icon="fas fa-award">
+                                                                            <option value="Acupuntura">Acupuntura</option>
+                                                                            <option value="Alergia e imunologia">Alergia e imunologia</option>
+                                                                            <option value="Anestesiologia">Anestesiologia</option>
+                                                                            <option value="Angiologia">Angiologia</option>
+                                                                            <option value="Cancerologia">Cancerologia</option>
+                                                                            <option value="Cardiologia">Cardiologia</option>
+                                                                            <option value="Coloproctologia">Coloproctologia</option>
+                                                                            <option value="Dermatologia">Dermatologia</option>
+                                                                            <option value="Endocrinologia">Endocrinologia</option>
+                                                                            <option value="Gastroenterologia">Gastroenterologia</option>
+                                                                            <option value="Genética médica">Genética médica</option>
+                                                                            <option value="Geriatria">Geriatria</option>
+                                                                            <option value="Ginecologia e obstetrícia">Ginecologia e obstetrícia</option>
+                                                                            <option value="Hematologia e hemoterapia">Hematologia e hemoterapia</option>
+                                                                            <option value="Infectologia">Infectologia</option>
+                                                                            <option value="Mastologia">Mastologia</option>
+                                                                            <option value="Nefrologia">Nefrologia</option>
+                                                                            <option value="Neurocirurgia">Neurocirurgia</option>
+                                                                            <option value="Neurologia">Neurologia</option>
+                                                                            <option value="Nutrologia">Nutrologia</option>
+                                                                            <option value="Oftalmologia">Oftalmologia</option>
+                                                                            <option value="Ortopedia e traumatologia">Ortopedia e traumatologia</option>
+                                                                            <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+                                                                            <option value="Patologia clínica/Medicina laboratorial">Patologia clínica/Medicina laboratorial</option>
+                                                                            <option value="Patologia">Patologia</option>
+                                                                            <option value="Pediatria">Pediatria</option>
+                                                                            <option value="Pneumologia">Pneumologia</option>
+                                                                            <option value="Psiquiatria">Psiquiatria</option>
+                                                                            <option value="Radiologia e diagnóstico por imagem">Radiologia e diagnóstico por imagem</option>
+                                                                            <option value="Radioterapia">Radioterapia</option>
+                                                                            <option value="Reumatologia">Reumatologia</option>
+                                                                            <option value="Urologia">Urologia</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="ESPECIALIDADES MÉDICAS ASSISTENCIAIS" data-icon="fas fa-award">
+                                                                            <option value="Medicina de família e comunidade"> Medicina de família e comunidade</option>
+                                                                            <option value="Medicina do trabalho">Medicina do trabalho</option>
+                                                                            <option value="Medicina do tráfego">Medicina do tráfego</option>
+                                                                            <option value="Medicina esportiva">Medicina esportiva</option>
+                                                                            <option value="Medicina física e reabilitação">Medicina física e reabilitação</option>
+                                                                            <option value="Medicina intensiva">Medicina intensiva</option>
+                                                                            <option value="Medicina legal">Medicina legal</option>
+                                                                            <option value="Medicina nuclear">Medicina nuclear</option>
+                                                                            <option value="Medicina preventiva e social">Medicina preventiva esocial</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="ESPECIALIDADES CIRÚRGICAS" data-icon="fas fa-award">
+                                                                            <option value="Cirurgia cardiovascular">Cirurgia cardiovascular</option>
+                                                                            <option value="Cirurgia de cabeça e pescoço">Cirurgia de cabeça e pescoço</option>
+                                                                            <option value="Cirurgia do aparelho digestivo">Cirurgia do aparelho digestivo</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="PROCEDIMENTOS" data-icon="fas fa-stethoscope">
+                                                                            <option value="Endoscopia">Endoscopia</option>
+                                                                            <option value="Hemopatia">Hemopatia</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="OUTROS">
+                                                                            <option value="Clínica Médica">Clínica Médica</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-12" data-for="Temporary Member"  data-status="desactived">
+                                                                    <select id="RSCITMAE" name="registration-step-commercial-information-temporary-member-area-of-expertise" aria-describedby="AREA OF EXPERTISE" data-type="bootstrap-select" class="selectpicker form-control"
+                                                                            data-style="bg-transparent text-dark border"
+                                                                            data-size="10" 
+                                                                            data-live-search="true" 
+                                                                            data-selected-text-format="count"
+                                                                            data-none-selected-text="Selecione sua área de especialidade"
+                                                                            data-count-selected-text="{0} áreas selecionadas"
+                                                                            data-none-results-text="Nenhum resultado correspondente {0}"
+                                                                            multiple disabled required>
+                                                                        <optgroup label="ESPECIALIDADES MÉDICAS" data-icon="fas fa-award">
+                                                                            <option value="Acupuntura">Acupuntura</option>
+                                                                            <option value="Alergia e imunologia">Alergia e imunologia</option>
+                                                                            <option value="Anestesiologia">Anestesiologia</option>
+                                                                            <option value="Angiologia">Angiologia</option>
+                                                                            <option value="Cancerologia">Cancerologia</option>
+                                                                            <option value="Cardiologia">Cardiologia</option>
+                                                                            <option value="Coloproctologia">Coloproctologia</option>
+                                                                            <option value="Dermatologia">Dermatologia</option>
+                                                                            <option value="Endocrinologia">Endocrinologia</option>
+                                                                            <option value="Gastroenterologia">Gastroenterologia</option>
+                                                                            <option value="Genética médica">Genética médica</option>
+                                                                            <option value="Geriatria">Geriatria</option>
+                                                                            <option value="Ginecologia e obstetrícia">Ginecologia e obstetrícia</option>
+                                                                            <option value="Hematologia e hemoterapia">Hematologia e hemoterapia</option>
+                                                                            <option value="Infectologia">Infectologia</option>
+                                                                            <option value="Mastologia">Mastologia</option>
+                                                                            <option value="Nefrologia">Nefrologia</option>
+                                                                            <option value="Neurocirurgia">Neurocirurgia</option>
+                                                                            <option value="Neurologia">Neurologia</option>
+                                                                            <option value="Nutrologia">Nutrologia</option>
+                                                                            <option value="Oftalmologia">Oftalmologia</option>
+                                                                            <option value="Ortopedia e traumatologia">Ortopedia e traumatologia</option>
+                                                                            <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+                                                                            <option value="Patologia clínica/Medicina laboratorial">Patologia clínica/Medicina laboratorial</option>
+                                                                            <option value="Patologia">Patologia</option>
+                                                                            <option value="Pediatria">Pediatria</option>
+                                                                            <option value="Pneumologia">Pneumologia</option>
+                                                                            <option value="Psiquiatria">Psiquiatria</option>
+                                                                            <option value="Radiologia e diagnóstico por imagem">Radiologia e diagnóstico porimagem</option>
+                                                                            <option value="Radioterapia">Radioterapia</option>
+                                                                            <option value="Reumatologia">Reumatologia</option>
+                                                                            <option value="Urologia">Urologia</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="ESPECIALIDADES MÉDICAS ASSISTENCIAIS" data-icon="fas fa-award">
+                                                                            <option value="Medicina de família e comunidade">Medicina de famíliA e comunidade</option>
+                                                                            <option value="Medicina do trabalho">Medicina do trabalho</option>
+                                                                            <option value="Medicina do tráfego">Medicina do tráfego</option>
+                                                                            <option value="Medicina esportiva">Medicina esportiva</option>
+                                                                            <option value="Medicina física e reabilitação">Medicina física e reabilitação</option>
+                                                                            <option value="Medicina intensiva">Medicina intensiva</option>
+                                                                            <option value="Medicina legal">Medicina legal</option>
+                                                                            <option value="Medicina nuclear">Medicina nuclear</option>
+                                                                            <option value="Medicina preventiva e social">Medicina preventiva e social</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="ESPECIALIDADES CIRÚRGICAS" data-icon="fas fa-award">
+                                                                            <option value="Cirurgia cardiovascular">Cirurgia cardiovascular</option>
+                                                                            <option value="Cirurgia de cabeça e pescoço">Cirurgia de cabeça e pescoço</option>
+                                                                            <option value="Cirurgia do aparelho digestivo">Cirurgia do aparelho digestivo</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="PROCEDIMENTOS" data-icon="fas fa-stethoscope">
+                                                                            <option value="Endoscopia">Endoscopia</option>
+                                                                            <option value="Hemopatia">Hemopatia</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="OUTROS">
+                                                                            <option value="Clínica Médica">Clínica Médica</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-12" data-for="Reference Member"  data-status="desactived">
+                                                                    <select id="RSCIRMAOE" name="registration-step-commercial-information-reference-member-area-of-expertise" aria-describedby="AREA OF EXPERTISE" data-type="bootstrap-select" class="selectpicker form-control"
+                                                                            data-style="bg-transparent text-dark border"
+                                                                            data-size="10" data-live-search="true"
+                                                                            data-selected-text-format="count"
+                                                                            data-none-selected-text="Selecione sua área de especialidade"
+                                                                            data-count-selected-text="{0} áreas selecionadas"
+                                                                            data-none-results-text="Nenhum resultado correspondente {0}"
+                                                                            multiple disabled required>
+                                                                        <optgroup label="ESPECIALIDADES MÉDICAS" data-icon="fas fa-award">
+                                                                            <option value="Acupuntura">Acupuntura</option>
+                                                                            <option value="Alergia e imunologia">Alergia e imunologia</option>
+                                                                            <option value="Anestesiologia">Anestesiologia</option>
+                                                                            <option value="Angiologia">Angiologia</option>
+                                                                            <option value="Cancerologia">Cancerologia</option>
+                                                                            <option value="Cardiologia">Cardiologia</option>
+                                                                            <option value="Coloproctologia">Coloproctologia</option>
+                                                                            <option value="Dermatologia">Dermatologia</option>
+                                                                            <option value="Endocrinologia">Endocrinologia</option>
+                                                                            <option value="Gastroenterologia">Gastroenterologia</option>
+                                                                            <option value="Genética médica">Genética médica</option>
+                                                                            <option value="Geriatria">Geriatria</option>
+                                                                            <option value="Ginecologia e obstetrícia">Ginecologia e obstetrícia</option>
+                                                                            <option value="Hematologia e hemoterapia">Hematologia e hemoterapia</option>
+                                                                            <option value="Infectologia">Infectologia</option>
+                                                                            <option value="Mastologia">Mastologia</option>
+                                                                            <option value="Nefrologia">Nefrologia</option>
+                                                                            <option value="Neurocirurgia">Neurocirurgia</option>
+                                                                            <option value="Neurologia">Neurologia</option>
+                                                                            <option value="Nutrologia">Nutrologia</option>
+                                                                            <option value="Oftalmologia">Oftalmologia</option>
+                                                                            <option value="Ortopedia e traumatologia">Ortopedia e traumatologia</option>
+                                                                            <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+                                                                            <option value="Patologia clínica/Medicina laboratorial">Patologia clínica/Medicina laboratorial</option>
+                                                                            <option value="Patologia">Patologia</option>
+                                                                            <option value="Pediatria">Pediatria</option>
+                                                                            <option value="Pneumologia">Pneumologia</option>
+                                                                            <option value="Psiquiatria">Psiquiatria</option>
+                                                                            <option value="Radiologia e diagnóstico por imagem">Radiologia e diagnóstico por imagem</option>
+                                                                            <option value="Radioterapia">Radioterapia</option>
+                                                                            <option value="Reumatologia">Reumatologia</option>
+                                                                            <option value="Urologia">Urologia</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="ESPECIALIDADES MÉDICAS ASSISTENCIAIS" data-icon="fas fa-award">
+                                                                            <option value="Medicina de família e comunidade">Medicina de família e comunidade</option>
+                                                                            <option value="Medicina do trabalho">Medicina do trabalho</option>
+                                                                            <option value="Medicina do tráfego">Medicina do tráfego</option>
+                                                                            <option value="Medicina esportiva">Medicina esportiva</option>
+                                                                            <option value="Medicina física e reabilitação">Medicina física e reabilitação</option>
+                                                                            <option value="Medicina intensiva">Medicina intensiva</option>
+                                                                            <option value="Medicina legal">Medicina legal</option>
+                                                                            <option value="Medicina nuclear">Medicina nuclear</option>
+                                                                            <option value="Medicina preventiva e social">Medicina preventiva e social</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="ESPECIALIDADES CIRÚRGICAS" data-icon="fas fa-award">
+                                                                            <option value="Cirurgia cardiovascular">Cirurgia cardiovascular</option>
+                                                                            <option value="Cirurgia de cabeça e pescoço">Cirurgia de cabeça e pescoço</option>
+                                                                            <option value="Cirurgia do aparelho digestivo">Cirurgia do aparelho digestivo</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="PROCEDIMENTOS" data-icon="fas fa-stethoscope">
+                                                                            <option value="Endoscopia">Endoscopia</option>
+                                                                            <option value="Hemopatia">Hemopatia</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="OUTROS">
+                                                                            <option value="Clínica Médica">Clínica Médica</option>
+                                                                        </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-12" data-for="Reference Member"  data-status="desactived">
+                                                                    <select id="RSCIRMCT" name="registration-step-commercial-information-reference-member-choose-team" aria-describedby="CHOOSE TEAM" class="custom-select" disabled required>
+                                                                        <option selected disabled>Selecione a equipe desejada</option>
+                                                                        <option value="Team X">Equipe X</option>
+                                                                        <option value="Team Y">Equipe Y</option>
+                                                                        <option value="Team |">Equipe Z</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group col-12" data-for="Eventual Member"   data-status="desactived">
+                                                                    <select id="RSCIEMAE" name="registration-step-commercial-information-eventual-member-area-of-expertise" data-type="bootstrap-select" aria-describedby="AREA OF EXPERTISE" class="form-control selectpicker" 
+                                                                    data-style="bg-transparent text-dark border"
+                                                                    data-size="10" 
+                                                                    data-live-search="true" 
+                                                                    data-selected-text-format="count"
+                                                                    data-none-selected-text="Selecione o setor de contratação"
+                                                                    data-count-selected-text="{0} setores selecionados"
+                                                                    data-none-results-text="Nenhum resultado correspondente {0}"
+                                                                    multiple disabled required>
+                                                                <optgroup label="ESPECIALIDADES MÉDICAS" data-icon="fas fa-award">
+                                                                    <option value="Anatomia Patológica">Anatomia Patológica</option>
+                                                                    <option value="Cardiologia">Cardiologia</option>
+                                                                    <option value="Clinica Médica">Clinica Médica</option>
+                                                                    <option value="Dermatologia">Dermatologia</option>
+                                                                    <option value="Endocrinologia">Endocrinologia</option>
+                                                                    <option value="Ergometria">Ergometria</option>
+                                                                    <option value="Gastroenterologia">Gastroenterologia</option>
+                                                                    <option value="Ginecologia">Ginecologia</option>
+                                                                    <option value="Hematologia">Hematologia</option>
+                                                                    <option value="Medicina do trabalho">Medicina do trabalho</option>
+                                                                    <option value="Nefrologia">Nefrologia</option>
+                                                                    <option value="Neurocirurgia">Neurocirurgia</option>
+                                                                    <option value="Neurologia vascular">Neurologia vascular</option>
+                                                                    <option value="Neurologia">Neurologia</option>
+                                                                    <option value="Oftalmologia">Oftalmologia</option>
+                                                                    <option value="Oncologia">Oncologia</option>
+                                                                    <option value="Ortopedia">Ortopedia</option>
+                                                                    <option value="Otorrinolaringologia">Otorrinolaringologia</option>
+                                                                    <option value="Pediatria">Pediatria</option>
+                                                                    <option value="Pneumologia">Pneumologia</option>
+                                                                    <option value="Proctologia">Proctologia</option>
+                                                                    <option value="Psiquiatria">Psiquiatria</option>
+                                                                    <option value="Radiologia Intervencionista">Radiologia Intervencionista</option>
+                                                                    <option value="Radiologia">Radiologia</option>
+                                                                    <option value="Reumatologia">Reumatologia</option>
+                                                                    <option value="Urologia">Urologia</option>
+                                                                </optgroup>
+                                                                <optgroup label="ESPECIALIDADES CIRÚRGICAS" data-icon="fas fa-syringe">
+                                                                    <option value="Cirurgia Buco-maxilo-facial">
+                                                                        Cirurgia Buco-maxilo-facial</option>
+                                                                    <option value="Cirurgia Cardiovascular">Cirurgia Cardiovascular</option>
+                                                                    <option value="Cirurgia de cabeça e pescoço">Cirurgia de cabeça e pescoço</option>
+                                                                    <option value="Cirurgia geral da Emergência">Cirurgia geral da Emergência</option>
+                                                                    <option value="Cirurgia geral">Cirurgia geral</option>
+                                                                    <option value="Cirurgia pediatrica">Cirurgia pediatrica</option>
+                                                                    <option value="Cirurgia Plástica (estética e reparadora)">Cirurgia Plástica (estética e reparadora)</option>
+                                                                    <option value="Cirurgia Torácica">Cirurgia Torácica</option>
+                                                                    <option value="Cirurgia vascular">Cirurgia vascular</option>
+                                                                </optgroup>
+                                                                <optgroup label="CTIS" data-icon="fas fa-hospital">
+                                                                    <option value="CTI cardiológico">CTI cardiológico</option>
+                                                                    <option value="CTI geral">CTI geral</option>
+                                                                    <option value="CTI neurológico">CTI neurológico</option>
+                                                                    <option value="CTI pediátrico">CTI pediátrico</option>
+                                                                    <option value="CTI pós-operatório">CTI pós-operatório</option>
+                                                                    <option value="CTI ventilatório">CTI ventilatório</option>
+                                                                </optgroup>
+                                                                <optgroup label="PROCEDIMENTOS" data-icon="fas fa-stethoscope">
+                                                                    <option value="Anestesia">Anestesia</option>
+                                                                    <option value="Cardiologia Intervencionista">Cardiologia Intervencionista</option>
+                                                                    <option value="Ecocardiografia">Ecocardiografia</option>
+                                                                    <option value="Endoscopia digestiva">Endoscopia digestiva</option>
+                                                                    <option value="Endoscopia respiratória">Endoscopia respiratória</option>
+                                                                </optgroup>
+                                                                <optgroup label="COMISSÕES E GRUPOS" data-icon="fas fa-star-of-life">
+                                                                    <option value="CCIH">CCIH</option>
+                                                                    <option value="EMTN">EMTN</option>
+                                                                </optgroup>
+                                                                <optgroup label="OUTROS">
+                                                                    <option value="Arritmia">Arritmia</option>
+                                                                    <option value="Banco de sangue">Banco de sangue</option>
+                                                                    <option value="Emergência clínica">Emergência clínica</option>
+                                                                    <option value="Unidade Semi-intensiva">Unidade Semi-intensiva
+                                                                    </option>
+                                                                </optgroup>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- END COMPONENT -->
+                                        </div>
+                                        <div class="col-12">
+                                            <button id="btn-submit-form-registration-step" type="button" class="btn btn-lg">
+                                                <span>Próxima Etapa</span>
+                                                <i class="fas fa-long-arrow-alt-right fa-lg align-middle ml-1"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- END COMPONENT -->
+
+    <!-- MODAL APPLICATION CATEGORY INFORMATION COMPONENT -->
+    <section>
+        <div id="modal-application-category-information-component" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="carousel-modal-application-type" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-modal-application-type" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-modal-application-type" data-slide-to="1"></li>
+                                <li data-target="#carousel-modal-application-type" data-slide-to="2"></li>
+                                <li data-target="#carousel-modal-application-type" data-slide-to="3"></li>
+                                <li data-target="#carousel-modal-application-type" data-slide-to="4"></li>
+                                <li data-target="#carousel-modal-application-type" data-slide-to="5"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div><img src="./dist/img/group-medial-doctors-team.png" class="img-fluid" alt="Imagem de capa do card"></div>
+                                                <div class="flex-fill">
+                                                    <p>
+                                                        <h5 class="card-title">Membro Contratado</h5>
+                                                        <h7 class="card-subtitle">
+                                                            São todos os médicos plantonistas, <br>
+                                                            rotinas, coordenadores, chefes,supervisores, <br>
+                                                            gerentes e diretores
+                                                        </h7>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex flex-column">
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A descrição de cargo possui validade enquanto permanecimento
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Carta de atuação possui prazo de 3 anos com revalidação anual
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Forma de avaliação é baseada em documentação e entre pares
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - O Treinamento em técnicas de ressuscitação é o modelo completo
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div><img src="./dist/img/group-medial-doctors-team.png" class="img-fluid" alt="Imagem de capa do card">
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <p>
+                                                        <h5 class="card-title">Membro de Equipe Assistente</h5>
+                                                        <h7 class="card-subtitle">
+                                                            Pertencem a equipes de especalistas ou de <br>
+                                                            médicos particulares que não internam em seu nome
+                                                        </h7>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex flex-column">
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Entrada é somente com a carta de atuação
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Carta de atuação possui um prazo de 3 anos
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Forma de avaliação é em conjunto com o Membro Regular
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - Obrigatório possuir técnicas de ressuscitação do modelo básico
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card border-0">
+                                        <div class="card-header">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div><img src="./dist/img/group-medial-doctors-team.png" class="img-fluid" alt="Imagem de capa do card">
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <p>
+                                                        <h5 class="card-title">Membro Regular</h5>
+                                                        <h7 class="card-subtitle">
+                                                            São médicos particulares com <br>
+                                                            frequência de internação maior que 12x ao ano
+                                                        </h7>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex flex-column">
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - O cadastro é renovado a cada 3 anos
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Carta de atuação possui prazo de 3 anos com revalidação
+                                                        anual
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Forma de avaliação é baseada em documentação e entre pares
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - Obrigatório possuir técnicas de ressuscitação do modelo básico
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div><img src="./dist/img/group-medial-doctors-team.png" class="img-fluid" alt="Imagem de capa do card">
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <p>
+                                                        <h5 class="card-title">Membro Temporário</h5>
+                                                        <h7 class="card-subtitle">
+                                                            São médicos particulares com <br>
+                                                            frequência de internação menor que 12x ao ano
+                                                        </h7>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex flex-column">
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - Não possui Carta de Atuação ou alguma forma de avaliação
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - As internações serão monitoradas pela Gêrencia do Corpo Clínico
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - Não será oferecido Treinamento em Técnicas de Ressucitação
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - O Treinamento é somente mediante aprovação da direção médica
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div><img src="./dist/img/group-medial-doctors-team.png" class="img-fluid" alt="Imagem de capa do card">
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <p>
+                                                        <h5 class="card-title">Membro de Referência</h5>
+                                                        <h7 class="card-subtitle">
+                                                            São especialistas clínicos ou cirúrgicos com escalas de <br>
+                                                            sobreaviso ou equipes de referência na especialidade.
+                                                        </h7>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex flex-column">
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Entrada é somente com Carta de Atuação
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Carta de atuação deverá possuir prazo de 3 anos
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - Não possui nenhuma Forma de Avaliação
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - Obrigatório possuir técnicas de ressuscitação do modelo
+                                                        completo
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div><img src="./dist/img/group-medial-doctors-team.png" class="img-fluid" alt="Imagem de capa do card">
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <p>
+                                                        <h5 class="card-title">Membro Eventual</h5>
+                                                        <h7 class="card-subtitle">
+                                                            São médicos legalmente habilidados no CREMERJ <br>
+                                                            sem internações nos últimos 12 meses <br>
+                                                            sendo permitido uma internação no período de um ano
+                                                        </h7>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex flex-column">
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - Será emitido um documento permitindo acesso temporário
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Internação será monitorada pela Gerência do Corpo Clínico
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - A Forma de avaliação é baseada em prontuário e protocolos
+                                                    </h5>
+                                                </div>
+                                                <div>
+                                                    <h5>
+                                                        <i class="fas fa-star-of-life mr-1" style="color: #DC3545;"></i>
+                                                        - Internação superior há 30 dias será remitido o documento
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-block">Próximo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END COMPONENT -->
+
+    <script src="./dist/js/all.min.js"></script>
+    <script src="./dist/js/processSteps.min.js"></script>
+
+</body>
+
+</html>

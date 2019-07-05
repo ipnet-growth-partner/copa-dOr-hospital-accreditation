@@ -1,0 +1,26 @@
+$default-color-property-type-list: border-color, background-color, color;
+$default-color-name-map: (
+    'transparent': transparent,
+    'white':         #FFFFFF,
+    'light-grey-1':  #F8F9FA,
+    'light-grey-2':  #DEE2E6,
+    'light-rose-1':  #FF648F,
+    'dark-red-1':    #DC3545,
+    'dark-grey-1':   #6C757D,
+    'dark-grey-2':   #6c757d,
+    'dark-blue-1':   #266081,
+    'dark-golden-1': #CEA135,
+    'dark-golden-2': #CEA135CC,
+    'black':         #000000
+);
+
+@mixin createColor($color-name, $color-property-type) {
+    @if not map-has-key($default-color-name-map, $color-name) {
+        @error 'The color #{$color-name} does not exist!';
+    } @else if not index($default-color-property-type-list, $color-property-type) {
+        @error 'The color type #{color-type} does not exist!';
+    } @else {
+        $color-property-value: map-get($default-color-name-map, $color-name);
+        #{$color-property-type}: #{$color-property-value} !important;
+    }
+}

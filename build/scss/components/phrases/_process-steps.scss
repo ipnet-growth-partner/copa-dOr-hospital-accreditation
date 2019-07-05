@@ -1,0 +1,24 @@
+@mixin phrase-process-steps-component {
+    div#phrase-process-container {
+        @include media-breakpoint-xs { margin-top: 1rem; }
+        @include media-breakpoint-sm { margin-top: 2rem; }
+
+        div.row {
+            justify-content: center;
+            
+            div#phrase-process-txt-container {
+                @extend %flexbox-container-column;
+                
+                p#phrase-process { 
+                    @extend %text-justify; 
+                }
+                
+                h6#phrase-process-good-luck {
+                    @extend %text-center;
+                    @include media-breakpoint-xs { margin-top: 2rem; }
+                    @include media-breakpoint-sm { margin-top: 5rem; }
+                }
+            }
+        }
+    }
+}

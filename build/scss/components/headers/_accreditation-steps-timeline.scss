@@ -1,0 +1,67 @@
+@mixin header-accreditation-steps-timeline-component {
+    #header-accreditation-steps-timeline-component[class="container-fluid"] {
+        @include padding-y(3rem, 3rem);
+        @include margin-y(unset, 7rem);
+        @include media-breakpoint-xs { display: none  !important; }
+        @include media-breakpoint-xl { display: block !important; }
+    
+        .row {
+            width: 100%;
+            @extend %position-absolute;
+    
+            &:first-child {
+                #accreditation-step-registration-container,
+                #accreditation-step-sending-documents-container,
+                #accreditation-step-analysis-approval-container,
+                #accreditation-step-signature-accreditation-container,
+                #accreditation-step-access-password-container {
+                    div {
+                        &:first-child {
+                            button {
+                                display: block !important;
+                                @extend %border-rounded;
+                                @include createFont(unset, unset, unset, bold);
+                                @include createColor('white', color);
+                                @include createShadow(box-shadow, 'sm');
+                                @include margin-y(.4rem, auto);
+                                @include margin-x(auto, auto);
+                                
+                                &[data-status="waiting"]:enabled   { @include createColor('dark-blue-1', background-color);   }
+                                &[data-status="completed"]:enabled { @include createColor('dark-golden-1', background-color); }
+                                
+                                &[data-status="null"]:disabled {
+                                    @include createColor('light-grey-1', background-color);
+                                    @include createColor('black', color);
+                                }
+                            }
+                        }
+        
+                        &:last-child {
+                            @include margin-y(1rem, unset);
+                           
+                            p {
+                                @extend %text-center;
+        
+                                span {
+                                    &:first-child { @include createFont(unset, unset, unset, bold); }
+                                    &:last-child  { @include createFont(unset, unset, .7rem, 400);  }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            &:last-child {
+                z-index: -5 !important;
+                @include padding-y(.5rem, unset);
+    
+                hr {
+                    width: 65rem !important;
+                    @include createShadow(box-shadow, 'sm');
+                    @include createBorder('none', solid, 3px, #F8F9FA);
+                }
+            }
+        }
+    }
+}

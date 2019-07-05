@@ -1,0 +1,49 @@
+// IMPORTING SUBCOMPONENTS
+@import '../forms/registration-step-one';
+
+// MAIN COMPONENT
+@mixin card-registration-step-component {
+    #card-registration-step-component {
+        @extend %border-rounded-none;
+        @include media-breakpoint-xs { @include removeBorder(top, right, left, bottom); }
+        
+        // SUBCOMPONENT FOR SMARTPHONES/TABLETS/IPADS
+        .card-header {
+            @extend %text-center;
+            @extend %border-none;
+            @extend %border-rounded-none;
+            @include createColor('dark-blue-1', background-color);
+            @include createColor('white', color);
+            @include createShadow(box-shadow, 'sm');
+            @include media-breakpoint-xs { display: block !important; }
+            @include media-breakpoint-xl { display: none  !important; }
+
+            h5 { @extend %remove-margin-bottom; }
+            h5,
+            h6,
+            h7 { 
+                @include createAlign(vertical-align, 'middle'); 
+                @include media-breakpoint-xs {
+                    h5 { @include createFont(unset, unset, 1.3rem, 500); }
+                    h6 { @include createFont(unset, unset, unset, 400);  }
+                    h7 { @include createFont(unset, unset, .9rem, 200);  }
+                }
+
+                @include media-breakpoint-xs {
+                    h7 { @include createFont(unset, unset, 1rem, 200); }
+                }
+            }
+        }
+
+        // FOR ALL DEVICES
+        .card-body {
+            @include createBorder('rounded-none', solid, 1px, #DEE2E6);
+            @include removeBorder(right, left);
+            @include media-breakpoint-xs { @include padding(unset, 0, 0, unset); }
+            @include media-breakpoint-md { @include padding(2rem, 2.2rem, 2.2rem, 2rem); }
+
+            // SUBCOMPONENT
+            @include form-registration-step-one-component;
+        }
+    }
+}

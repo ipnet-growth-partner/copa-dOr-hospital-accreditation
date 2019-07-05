@@ -1,0 +1,21 @@
+@mixin navbar-main-component($background-color) {
+    nav#navbar-main {
+        @extend %flexbox-align-center-middle;
+        @extend %text-center;
+        @include padding-y(1rem, 1rem);
+        @include createColor($background-color, background-color);
+       
+        div#navbar-main-container {
+            @extend %flexbox-container-column;
+    
+            img#navbar-main-logo {
+                @include media-breakpoint-xs { width: 17rem; }
+                @include media-breakpoint-lg { width: 17rem; }
+            }
+        
+            span#navbar-main-category-title {
+                @include createFont('Roboto', normal, 1.2rem, 500);
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@mixin form-code-acess-component(
+$phrase-text-color, 
+$input-bg-color, $input-focus-border-color, 
+$btn-bg-color, $btn-text-color, $btn-focus-bg-color,
+$hyperlink-text-color
+) {
+    div#main-container {
+        @extend %flexbox-container-column;
+        @extend %flexbox-align-center-middle;
+        @include media-breakpoint-md { @include padding-x(4rem, 4rem);   }
+        @include media-breakpoint-lg { @include padding-x(15rem, 15rem); }
+        @include media-breakpoint-xl { @include padding-x(20rem, 20rem); }
+
+        div {
+            &#main-phrase-container {
+                @include padding-y(1.2rem, 1.2rem);
+
+                p {
+                    @extend %text-center;
+                    @include createFont('Roboto', normal, 1.1rem, 400);
+                    @include createColor($phrase-text-color, color);
+                }
+            }
+
+            &#main-form-container {
+                form {
+                    div.form-row:first-child {
+                        padding-bottom: 3rem;
+                        @include padding-x(1.6rem, 1.6rem);
+
+                        input[type="text"] {
+                            @extend %text-center;
+                            @extend %border-rounded-none;
+                            @include createFont('Roboto', normal, 1.8rem, 900);
+                            @include createColor($input-bg-color, background-color);
+                            @include removeBorder(top, right, left);
+                            @include removeShadow(box-shadow);
+                            @include pseudo-spin-button { -webkit-appearance: none !important; }
+                            @include pseudo-auto-fill   { -webkit-box-shadow: 0 0 0px 1000px white inset !important; }
+
+                            @include media-breakpoint-xs {
+                                @include padding-y(1rem, 1rem);
+                            }
+
+                            @include media-breakpoint-sm {
+                                @include padding-y(2.5rem, 2.5rem);
+                            }
+                 
+                            @include media-breakpoint-md {
+                                @include padding-y(3rem, 3rem);
+                            }
+    
+                            &:focus {
+                                @include createColor($input-focus-border-color, border-color);
+                            }
+    
+                        }
+                    }
+
+                    div.form-row:last-child {
+                        padding-bottom: 1.4rem;
+                        @include padding-x(1.6rem, 1.6rem);
+                        
+                        a {
+                            width: 100%;
+                            @include padding-y(1rem, 1rem);
+                            @include createFont('Roboto', normal, unset, 700);
+                            @include createColor($btn-bg-color, background-color);
+                            @include createColor($btn-text-color, color);
+                            @include createShadow(box-shadow, 'sm');
+    
+                            &:hover {
+                                @include createColor($btn-focus-bg-color, background-color);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#main-resend-code-container {
+                a {
+                    @include createFont('Roboto', normal, unset, 400);
+                    @include createColor($hyperlink-text-color, color);
+                }
+            }
+        }
+    }
+}

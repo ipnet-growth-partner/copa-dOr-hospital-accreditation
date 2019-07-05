@@ -1,0 +1,57 @@
+// DEPENDENCIES
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../../node_modules/bootstrap-select/sass/bootstrap-select.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+
+// @MIXINS AND %PLACEHOLDERS
+@import '../abstracts/breakpoints';
+@import '../abstracts/flexbox';
+@import '../abstracts/pseudo-elements';
+@import '../abstracts/fonts';
+@import '../abstracts/colors';
+@import '../abstracts/spaces';
+@import '../abstracts/aligns';
+@import '../abstracts/positions';
+@import '../abstracts/borders';
+@import '../abstracts/shadows';
+
+// COMPONENTS
+@import '../components/headers/navs/main';
+@import '../components/headers/accreditation-steps-timeline';
+@import '../components/carousels/accreditation-steps-component';
+@import '../components/modals/application-category-information';
+
+// PAGE ELEMENTS, STYLES AND COMPONENTS
+@include font-face('Roboto-Thin', 'Thin');
+@include font-face('Roboto-Light', 'Light');
+@include font-face('Roboto-Regular', 'Regular');
+@include font-face('Roboto-Medium', 'Medium');
+@include font-face('Roboto-Bold', 'Bold');
+@include font-face('Roboto-Black', 'Black');
+
+body {
+    @include createFont('Roboto', normal, 1rem, normal);
+    @include createColor('light-grey-1', background-color);
+}
+
+header { 
+    // COMPONENT'S
+    @include navbar-main-component('transparent'); 
+    @include header-accreditation-steps-timeline-component;
+}
+
+main {
+    // COMPONENT
+    @include carousel-accreditation-steps-component;
+}
+
+section {
+    // COMPONENT
+    @include modal-application-category-information-component;
+}
+
+
+
+
+
+

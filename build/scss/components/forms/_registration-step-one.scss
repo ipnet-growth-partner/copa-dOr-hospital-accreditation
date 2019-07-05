@@ -1,0 +1,333 @@
+// MAIN COMPONENT
+@mixin form-registration-step-one-component {
+    form {
+        .form-row {
+            & {
+                .form-group {
+                    h6 {
+                        @include margin-x(unset, .25rem);
+                        @include removeMargin(bottom);
+                        @include createFont(unset, unset, unset, 700);
+
+                        small {
+                            @include createColor('dark-grey-2', color);
+                        }
+                    }
+
+                    .bootstrap-select {
+                        .dropdown-menu { width: 100% !important; }
+                    }
+
+                    textarea,
+                    select,
+                    input,
+                    button.btn.dropdown-toggle {
+                        &:focus {
+                            outline: none !important;
+                            @include createColor('dark-golden-2', border-color);
+                            @include createShadow(box-shadow, 'sm');
+                        }
+                    }
+                }
+            }
+
+            &#card-registration-step-form-personal-information {
+                .form-group {
+                    &:first-child { 
+                        @include media-breakpoint-xs { margin-top: 1rem !important; }
+                        @include media-breakpoint-md { @include removeMargin(top);  }
+                    }
+
+                    &:nth-child(12),
+                    &:nth-child(13) {
+                        label {
+                            &[data-for="step-one-form-sex-male"] {
+                                input {
+                                    &:checked {
+                                        + .card {
+                                            @include createColor('dark-blue-1', border-color);
+                                            @include createColor('white', color);
+                                            @include createShadow(box-shadow, 'regular');
+
+                                            .card-footer {
+                                                @include createColor('dark-blue-1', background-color);
+                                            }
+                                        }
+                                    }
+
+                                    &:hover {
+                                        + .card { 
+                                            @include createColor('dark-blue-1', border-color);
+                                            @include createShadow(box-shadow, 'regular');
+                                        }
+                                    }
+                                }
+                            }
+
+                            &[data-for="step-one-form-sex-female"] {
+                                input {
+                                    &:checked {
+                                        + .card  {
+                                            @include createColor('light-rose-1', border-color);
+                                            @include createColor('white', color);
+                                            @include createShadow(box-shadow, 'regular');
+
+                                            .card-footer {
+                                                @include createColor('light-rose-1', background-color);
+                                            }
+                                        }
+                                    }
+
+                                    &:hover {
+                                        + .card { 
+                                            @include createColor('light-rose-1', border-color);
+                                            @include createShadow(box-shadow, 'regular');
+                                        }
+                                    }
+                                }
+                            }
+                            
+
+                            .card {
+                                .card-body {
+                                    @include padding-y(1rem, 1rem);
+
+                                    img {
+                                        @include media-breakpoint-xs { width: 4rem; }
+                                        @include media-breakpoint-sm { width: 5rem; }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#card-registration-step-form-curricular-information {
+                .form-group {
+                    &:nth-child(5),
+                    &:nth-child(6),
+                    &:nth-child(7),
+                    &:nth-child(8) {
+                        label {
+                            & {
+                                .card {
+                                    .card-body { 
+                                        @include padding-y(1rem, 1rem);
+
+                                        img { 
+                                            @include media-breakpoint-xs { width: 4rem; }
+                                            @include media-breakpoint-xs { width: 5rem; }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#card-registration-step-form-commercial-information {
+                .form-group {
+                    &:nth-child(4)[data-status="actived"],
+                    &:nth-child(5)[data-status="actived"],
+                    &:nth-child(6)[data-status="actived"],
+                    &:nth-child(7)[data-status="actived"],
+                    &:nth-child(8)[data-status="actived"],
+                    &:nth-child(9)[data-status="actived"],
+                    &:nth-child(10)[data-status="actived"] { display: block !important; }
+                    
+                    &:nth-child(4)[data-status="desactived"],
+                    &:nth-child(5)[data-status="desactived"],
+                    &:nth-child(6)[data-status="desactived"],
+                    &:nth-child(7)[data-status="desactived"],
+                    &:nth-child(8)[data-status="desactived"],
+                    &:nth-child(9)[data-status="desactived"],
+                    &:nth-child(10)[data-status="desactived"] { display: none !important; }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        label {
+                            width: 100% !important;
+
+                            input {
+                                &:checked {
+                                    + .card {
+                                        @include createColor('dark-golden-1', border-color);
+                                        @include createShadow(box-shadow, 'regular');
+
+                                        .card-footer {
+                                            @include createColor('dark-golden-1', background-color);
+                                        }
+                                    }
+                                }
+
+                                &:hover {
+                                    + .card { 
+                                        @include createColor('dark-golden-1', border-color);
+                                        @include createShadow(box-shadow, 'regular');
+                                    }
+                                }
+                            }
+
+                            .card {
+                                .card-body {
+                                    @extend %text-center;
+                                    @include createFont(unset, unset, unset, bold);
+                                    @include padding(1rem, unset, unset, 1rem);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#card-registration-step-form-application-category {
+                .form-group {
+                    &:nth-child(3)[data-status="actived"],
+                    &:nth-child(4)[data-status="actived"],
+                    &:nth-child(5)[data-status="actived"],
+                    &:nth-child(6)[data-status="actived"],
+                    &:nth-child(7)[data-status="actived"],
+                    &:nth-child(8)[data-status="actived"],
+                    &:nth-child(9)[data-status="actived"],
+                    &:nth-child(10)[data-status="actived"],
+                    &:nth-child(11)[data-status="actived"],
+                    &:nth-child(12)[data-status="actived"] { display: block !important; }
+                    
+                    &:nth-child(3)[data-status="desactived"],
+                    &:nth-child(4)[data-status="desactived"],
+                    &:nth-child(5)[data-status="desactived"],
+                    &:nth-child(6)[data-status="desactived"],
+                    &:nth-child(7)[data-status="desactived"],
+                    &:nth-child(8)[data-status="desactived"],
+                    &:nth-child(9)[data-status="desactived"],
+                    &:nth-child(10)[data-status="desactived"],
+                    &:nth-child(11)[data-status="desactived"],
+                    &:nth-child(12)[data-status="desactived"] { display: none !important; }
+
+                    &:nth-child(2) {
+                        label {
+                            @include margin-x(0, .25rem);
+                           
+                            button {
+                                cursor: help;
+                                @include createFont(unset, unset, .8rem, bold);
+                                @include createColor('dark-blue-1', color);
+                                @include padding-x(0, 0);
+                                @include removeShadow(box-shadow);
+                                
+                                span {
+                                    @include removeMargin(bottom);
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(3),
+                    &:nth-child(4),
+                    &:nth-child(5) {
+                        label {
+                            & {
+                                .card {
+                                    .card-body {
+                                        @include padding-y(0, 0);
+
+                                        img { @include media-breakpoint-xs { width: 7rem; } }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#card-registration-step-form-personal-information,
+            &#card-registration-step-form-curricular-information,
+            &#card-registration-step-form-commercial-information,
+            &#card-registration-step-form-application-category {
+                 .form-group {
+                    & {
+                        label {
+                            .card {
+                                .card-body,
+                                .card-footer {
+                                    h7 {
+                                        @include media-breakpoint-xs { @include createFont(unset, unset, .7rem, unset); }
+                                        @include media-breakpoint-sm { @include createFont(unset, unset, .9rem, unset); }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:first-child { 
+                        @include removeMargin(bottom);
+                    }
+                }
+            }
+
+            &#card-registration-step-form-curricular-information,
+            &#card-registration-step-form-commercial-information,
+            &#card-registration-step-form-application-category { margin-top: 1rem; }
+
+            // STYLE GLOBAL FOR CARD'S INPUT RADIO
+            &#card-registration-step-form-personal-information,
+            &#card-registration-step-form-curricular-information,
+            &#card-registration-step-form-application-category {
+                label {
+                    width: 100% !important;
+                    cursor: pointer;
+                    
+                    .card {
+                        .card-body,
+                        .card-footer { @extend %text-center; }
+                        
+                        .card-footer {
+                            @include createFont(unset, unset, unset, bold);
+                            @include padding-y(1rem, 1rem);
+                        }
+                    }
+                }
+            }
+
+            &#card-registration-step-form-curricular-information,
+            &#card-registration-step-form-application-category {
+                label {
+                    .card {
+                        .card-footer {
+                            .d-flex {
+                                div {
+                                    &:first-child {
+                                        @include margin-x(.25rem, unset);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    input {
+                        &:checked {
+                            + .card {
+                                @include createColor('dark-golden-1', border-color);
+                                @include createColor('white', color);
+                                @include createShadow(box-shadow, 'regular');
+
+                                .card-footer {
+                                    @include createColor('dark-golden-1', background-color);
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            + .card { 
+                                @include createColor('dark-golden-1', border-color);
+                                @include createShadow(box-shadow, 'regular');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

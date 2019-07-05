@@ -1,0 +1,11 @@
+@mixin pseudo-spin-button {
+    &::-webkit-outer-spin-button { @content; }
+    &::-webkit-inner-spin-button { @content; }
+}
+
+@mixin pseudo-auto-fill {
+    &:-webkit-autofill { @content; }
+    &:-moz-autofill    { @content; }
+    &:-ms-autofill     { @content; }
+    &:-o-autofill      { @content; }
+}

@@ -1,0 +1,33 @@
+@function font-face-map($target, $weight) {
+    $str: $target;
+    $str-index: str-index($str, '-');
+    $str-slice: str-slice($str, 1, $str-index - 1);
+    
+    $font-family: $str-slice;
+    $font-src: '../fonts/#{to-lower-case($str-slice)}/#{to-lower-case($str)}';
+    
+    @if $weight == 'Thin' {
+        $map: (family: $font-family, font-weight: 100, src: $font-src);
+        @return $map;
+    } @else if $weight == 'ExtraLight' {
+        $map: (family: $font-family, font-weight: 200, src: $font-src);
+        @return $map;
+    } @else if $weight == 'Light' {
+        $map: (family: $font-family, font-weight: 300, src: $font-src);
+        @return $map;
+    } @else if $weight == 'Regular' {
+        $map: (family: $font-family, font-weight: normal, src: $font-src);
+        @return $map;
+    } @else if ($weight == 'Medium') or ($weight == 'Book') {
+        $map: (family: $font-family, font-weight: 500, src: $font-src);
+        @return $map;
+    } @else if ($weight == 'Bold') {
+        $map: (family: $font-family, font-weight: 700, src: $font-src);
+        @return $map;
+    } @else if ($weight == 'Black') or ($weight == 'Heavy') {
+        $map: (family: $font-family, font-weight: 900, src: $font-src);
+        @return $map;
+    } @else {
+        @error 'DO NOT EXIST THIS SOURCE WEIGHT!';
+    }
+}

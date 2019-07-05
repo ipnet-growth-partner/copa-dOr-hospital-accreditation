@@ -1,0 +1,32 @@
+$default-align-type-list: text-align, vertical-align;
+$default-align-style-map: (
+    'text-center':  center,
+    'text-justify': justify,
+    'middle':       middle
+);
+
+%text-center   { text-align: center     !important; }
+%text-right    { text-align: right      !important; }
+%text-left     { text-align: left       !important; }
+%text-justify  { text-align: justify    !important; }
+%align-middle  { vertical-align: middle !important; }
+
+@mixin createAlign($align-property-type, $align-style-type) {
+    @if not index($default-align-type-list, $align-property-type) {
+        @error 'The align type #{$align-property-type} does not exist!';
+    } @else {
+        @if not index($align-style-type, $align-style-type) {
+            @error 'The align style type #{$align-style-type} does not exist!';
+        } @else {
+            $align-style-type-value: map-get($default-align-style-map, $align-style-type);
+
+            @if $align-property-type == text-align {
+                text-align: $align-style-type-value !important;
+            }
+
+            @if $align-property-type == vertical-align {
+                vertical-align: $align-style-type-value !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+$default-bootstrap-grid-xs: 320px;
+$default-bootstrap-grid-sm: 576px;
+$default-bootstrap-grid-md: 768px;
+$default-bootstrap-grid-lg: 992px;
+$default-bootstrap-grid-xl: 1200px;
+
+@mixin media-breakpoint-xs {
+    @media (min-width: $default-bootstrap-grid-xs) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-sm {
+    @media (min-width: $default-bootstrap-grid-sm) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-md {
+    @media (min-width: $default-bootstrap-grid-md) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-lg {
+    @media (min-width: $default-bootstrap-grid-lg) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-xl {
+    @media (min-width: $default-bootstrap-grid-xl) {
+        @content;
+    }
+}
+
+
+

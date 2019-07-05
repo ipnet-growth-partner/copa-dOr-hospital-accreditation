@@ -1,0 +1,51 @@
+$default-shadow-type-list: text-shadow, box-shadow;
+$default-shadow-style-map: (
+    'none':    none,
+    '3D':      1px 1px 1px #000000,
+    'sm':      0 .125rem .25rem rgba(0,0,0,.075),
+    'regular': 0 .5rem 1rem rgba(0,0,0,.15)
+);
+
+@mixin createShadow($shadow-property-type, $shadow-style-type) {
+    @if not index($default-shadow-type-list, $shadow-property-type) {
+        @error 'The shadow type #{$shadow-property-type} does not exist!';
+    } @else {
+        @if not index($shadow-style-type, $shadow-style-type) {
+            @error 'The shadow style type #{$shadow-style-type} does not exist!';
+        } @else {
+            $shadow-style-type-value: map-get($default-shadow-style-map, $shadow-style-type);
+
+            @if $shadow-property-type == box-shadow {
+                @include box-shadow-webkit($shadow-style-type-value);
+            }
+
+            @if $shadow-property-type == text-shadow {
+                text-shadow: $shadow-style-type-value !important;
+            }
+        }
+    }
+}
+
+@mixin removeShadow($shadow-property-type...) {
+    @each $current-property-type in $shadow-property-type {
+        @if not index($default-shadow-type-list, $current-property-type) {
+            @error 'The shadow type #{$current-property-type} does not exist!';
+        } @else {
+            $shadow-style-value: map-get($default-shadow-style-map, 'none');
+
+            @if $current-property-type == box-shadow {
+                @include box-shadow-webkit($shadow-style-value);
+            }
+
+            @if $current-property-type == text-shadow {
+                text-shadow: $shadow-style-value !important;
+            }
+        }
+    }
+}
+
+@mixin box-shadow-webkit($property-value) {
+    -webkit-box-shadow: $property-value !important;
+       -moz-box-shadow: $property-value !important;
+            box-shadow: $property-value !important;
+}

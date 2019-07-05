@@ -1,0 +1,88 @@
+@mixin modal-application-category-information-component {
+    #modal-application-category-information-component {
+        .modal-body {
+            @extend %remove-padding;
+    
+            .carousel-indicators {
+                li { @include createColor('dark-blue-1', background-color); }
+            }
+    
+            .carousel-inner {
+                .carousel-item {
+                    @include margin-y(unset, 2.5rem);
+    
+                    .card {
+                       @extend %border-none; 
+    
+                       .card-header {
+                           @extend %remove-padding;  
+    
+                           .d-flex {
+                               @extend %text-center;
+                               @include createColor('white', color);
+                               @include createColor('black', border-color);
+                               @include createShadow('text-shadow','3D');
+                               @include removeBorder(top, right, left);
+    
+                               div {
+                                   &:last-child {
+                                       z-index: 9999 !important;
+                                       @extend %position-absolute;
+                                       @include media-breakpoint-xs { 
+                                           @include padding-y(unset, 1rem);
+                                           @include padding-x(.45rem, .45rem);
+                                        }
+    
+                                        @include media-breakpoint-xl { 
+                                            @include padding-y(unset, 6rem);
+                                        }
+    
+                                       h5 {
+                                           @include createFont(unset, unset, unset, 500);
+                                           @include media-breakpoint-lg { @include createFont(unset, unset, 1.1rem, unset); }
+                                        }
+    
+                                        h7 {
+                                            @include createFont(unset, unset, unset, 300);
+                                        }
+                                   }
+                               }
+                           }
+                       }
+    
+                       .card-body {
+                           @include padding-y(1.5rem, 1.5rem);
+                           @include media-breakpoint-xs { @include padding-x(2rem, 2rem); }
+                           @include media-breakpoint-sm { @include padding-x(3rem, 3rem); }
+    
+                           .d-flex {
+                               div {
+                                   @extend %text-left;
+                                   @include padding-y(.5rem, .5rem);
+    
+                                   h5 {
+                                       @extend %remove-margin-bottom;
+                                       @include createFont(unset, unset, unset, 300);
+                                       @include media-breakpoint-xs { @include  createFont(unset, unset, .65rem, unset); }
+                                       @include media-breakpoint-sm { @include  createFont(unset, unset, .79rem, unset); }
+                                   }
+                               }
+                           }
+                       }
+                    }
+                }
+            }
+        }
+    
+        .modal-footer {
+           @extend %border-none;
+           @extend %remove-padding-top;
+    
+           button {
+               @include createColor('dark-blue-1', background-color);
+               @include createColor('white', color);
+               @include createShadow(box-shadow, 'sm');
+           }
+        }
+    }
+}
