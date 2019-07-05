@@ -64,6 +64,8 @@ Since it is a **POC to demonstrate my abilities**, the following **attention** s
 
 - **Only the first step mentioned above is developed**
 
+- **The responsiveness has only been tested with the following resolutions: from 320px to 1366px, so from this you may have a chance of possible problems**
+
 # Developed with
 - [SASS](https://sass-lang.com/)
 - [TYPESCRIPT](https://www.typescriptlang.org/)
